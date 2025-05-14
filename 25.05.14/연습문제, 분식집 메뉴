@@ -1,0 +1,15 @@
+menu_dict = {'라면': 4000, '김밥': 3000, '우동': 4500, '만두': 5000} #딕셔너리 생성
+menu_list = list(menu_dict.values())
+
+print('==메뉴==')
+for food in menu_dict.keys():
+	print(' ', food, '\t', menu_dict[food], '\t')
+print("==========")
+
+food = input('* 주문할 음식은? ')
+cnt = int(input('* 몇 개?'))
+
+print('\n== 주문 ==')
+print(food, cnt)
+print('==========')
+print('총액', menu_dict[food]*cnt)
