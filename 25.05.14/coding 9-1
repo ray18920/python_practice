@@ -1,0 +1,22 @@
+print('1. 전화번호 추가하기')
+
+tel_dict = {}  # 딕셔너리 초기화
+
+while True:
+    input_name = input('업체명(그만하려면 0 입력) : ')
+    if (input_name == '0'):  # 0 입력되면 무한 루프 종료
+        break
+        
+    in_tel = input('전화번호 : ')  # 추가할 전화번호 입력
+    tel_dict[input_name] = in_tel  # 'input_name: in_tel' 아이템 추가
+
+print('\n2. 전화번호부')
+for name in tel_dict:  # tel_dict의 각 키(name)에 대해
+    print(name, ':', tel_dict[name][:4] + '-' + tel_dict[name][4:8])
+
+print('\n3. 전화번호 찾기')
+input_name = input('업체명 입력 : ')
+if input_name in tel_dict:
+    print(input_name, ":", tel_dict[input_name][:4] + '-' + tel_dict[input_name][4:8])
+else:
+    print('등록되지 않은 업체명입니다.')
