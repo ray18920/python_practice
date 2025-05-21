@@ -1,0 +1,22 @@
+def attendance_score(total, miss_h):
+    """ 총 수업 시간과 결석 시간에 따라 출석 점수 구하기 """
+    if miss_h >= total / 4:           #1/4 이상 결석
+        score = 0
+    elif miss_h >= total / 10:        #1/10이상, 1/4미만
+        score = 8
+    elif miss_h > 0:                  #0초과, 1/10미만
+        score = 9
+    else:                             #결석 0일 때
+        score = 10
+    return score                      #출석 점수 반환
+
+
+# 메인 코드
+lecture_hours = int(input('총 수업 시간 입력: '))
+absence_hours = int(input('총 결석 시간 입력: '))
+
+attendance_grade = attendance_score(lecture_hours, absence_hours)
+print('출석 점수:', attendance_grade)
+
+if attendance_grade == 0:
+    print('출석 미달로 과락!')
