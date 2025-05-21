@@ -1,0 +1,17 @@
+sales_dict = {'동부': 164, '서부': 175, '남부': 157, '북부': 193}
+sales_list = list(sales_dict.values())
+
+avg = round(sum(sales_list) / len(sales_list))
+print('* 평균 실적 :', avg)
+print('* 최고 실적 :', sales_list))
+
+print('\n= 지부\t 판매\t 평균과의 차이 +')
+for erea in sales_dict.keys():
+	print(' ', area, '\t', sales_dict[area], '\t', sales_dict[area]-avg)
+	
+	
+input_area = input('\n* 실적을 확인할 지부 입력 : ')
+if input_area in sales_dict:
+	print('*', input_area, ' 실적 :', sales_dict[input_area])
+else:
+	print('존재하지 않는 지부입니다.')

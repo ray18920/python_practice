@@ -1,0 +1,20 @@
+# 20명의 수강 신청 과목명 리스트
+s_course_l = ['C', 'C++', 'Python', 'C++', 'Java', 'C', 'R', 'C', 'Python',
+              'C++', 'Python', 'C', 'Python', 'C', 'Python', 'C++',
+              'Java', 'Python', 'R', 'C', 'Python']
+
+# 중복 요소를 제거한 과목명 세트 만들기
+course_set = set(s_course_l)
+print('개설 과목 목록 :', course_set)
+
+# 과목명: 신청수 딕셔너리 만들기
+course_dict = {}
+for e in course_set:
+    course_dict[e] = s_course_l.count(e)
+
+print('--------------')
+print(' 과목별 신청수 ')
+print('--------------')
+for k in course_dict:
+    print(f' {k:<8}: {course_dict[k]}') #k 과목명과 k 과목의 신청수 출력
+print('--------------')

@@ -1,0 +1,14 @@
+import random #random.choice 함수를 위한 모듈 임포트
+
+chemi_dict = { '수은': 'Hg', '철': 'Fe', '산소': 'O', '니켈': 'Ni', '수소': 'Hi', '구리': 'Cu', '인': 'P', '나트륨': 'Na', '칼슘': 'Ca', '아연': 'Zn'}
+
+name_list = list(chemi_dict.keys())
+problem = random.choice(name_list)
+
+print('*** 화학원소 기호 맞히기 ***\n')
+input_symbol = input('* %s의 기호는? ' %(problem))
+
+if (input_symbol == chemi_dict[problem]): #딕셔너리에 문제(키)를 넣어서 밸류가 나오도록...
+    print('정답입니다!')
+else:
+    print('정답은 %s 입니다. ' %(chemi_dict[problem]))
