@@ -1,0 +1,8 @@
+def print_cover():
+  print('==================')
+  print('  작성자 : 홍길동')
+  print('  부서명 : 인사부')
+  print('==================')
+
+#메인코드
+print_cover()
