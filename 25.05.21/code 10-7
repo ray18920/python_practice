@@ -1,0 +1,16 @@
+def multiple_add(a, b, *c_tuple, **d_dict): #위치1, 위치2, 가변 길이, 가변 키워드
+  tot = a + b + sum(c_tuple)
+  for value in d_dict.values():
+    tot += value
+  return tot
+
+#함수 호출 예
+result = multiple_add(1,2,3,4)
+print(result)
+
+result = multiple_add(1,2, n1=5, n2=6)
+print(result)
+
+
+result = multiple_add(1, 2, 3, 4, n1=5, n2=6)
+print(result)
