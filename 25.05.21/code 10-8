@@ -1,0 +1,12 @@
+def tuple_statistics(data):
+    tot = sum(data)
+    avg = tot / len(data)
+    maxi, mini = max(data), min(data)
+    return tot, avg, maxi, mini       # (합, 평균, 최댓값, 최솟값) 튜플 반환
+
+# 메인 코드
+quiz = [10, 7, 9, 8, 5]
+total, average, maximum, minimum = tuple_statistics(quiz)  # 튜플이 반환됨
+
+print('퀴즈 점수:', quiz)
+print('합:', total, '평균:', average, '최대:', maximum, '최소:', minimum)
