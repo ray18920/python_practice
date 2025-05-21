@@ -1,0 +1,12 @@
+def report_cover(name, part_name):
+"""
+직원명과 부서명을 받아 보고서 표지를 출력하는 함수   <= 함수를 설명하는 문서화 문자열(docstring)
+"""
+print('==================')
+print('  작성자:', name)
+print('  부서명:', part_name')
+print('==================')
+
+#메인 코드
+report_cover('홍길동', '인사부') #함수 호출
+report_cover('최고수', '영업부')
