@@ -1,0 +1,9 @@
+def display_resolution(): #함수정의
+  print('시작이 반! 나도 이제 프로그래머!')
+  print('차근차근 해서 실력자가 되어 보자.')
+  return None #반환값 없이함수 종료(생략가능)
+
+#메인코드
+print("====== 각오 출력하기 ======")
+display_resolution()
+print("==========================")
