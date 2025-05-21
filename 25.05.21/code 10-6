@@ -1,0 +1,12 @@
+def add(a, b, c=0):    #c는 인자가 전달되지 않으면 기본값이 0이 됨
+  return a+b+c
+
+#함수 호출 예
+result = add(1, 2)    # 1과 2를 순서대로 a와 b에 전달, c는 기본값이 0이됨 
+print(result, end=' , ')
+
+result = add(1, 2, 3) #1,2,3을 각각 순서대로 a, b, c에 전달
+print(result, end=', ')
+
+result = add(1, c=3, b=2) #1을 a에, 키워드 인자 3과 2를 각각 c와 b에 전달
+print(result)
