@@ -1,0 +1,25 @@
+def get_roots(a, b, c):
+    ''' 이차 방정식의 근을 구하는 함수 '''
+    D = b**2 - 4*a*c              # 판별식
+    r1 = (-b + D**0.5) / (2*a)     # 근1
+    r2 = (-b - D**0.5) / (2*a)     # 근2
+    return r1, r2                  # 두 근을 반환(튜플)
+
+# 메인 코드
+# 계수 a, b, c 입력받기
+while True:
+    a = float(input('계수 a 입력: '))
+    if a != 0:                    # 계수 a는 0이 아니어야 이차 방정식
+        break
+    else:
+        print('a는 0이 아니어야 합니다.')
+
+b = float(input('계수 b 입력: '))
+c = float(input('계수 c 입력: '))
+
+# 근을 구하는 함수 호출
+root1, root2 = get_roots(a, b, c)
+
+# 결과 출력
+print('\n근1:', root1)
+print('근2:', root2)
