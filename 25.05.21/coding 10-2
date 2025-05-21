@@ -1,0 +1,14 @@
+def average(*args):
+    """ 전달된 가변 인자의 평균을 계산하는 함수 """
+    if not args:                   # 전달된 인자가 없는 경우
+        return 0
+    return sum(args) / len(args)   # 평균 반환
+
+# 메인 코드
+a, b, c = 1, 2, 3
+
+print((), '평균:', average())
+print((a, b), '평균:', average(a, b))
+print((a, b, c), '평균:', average(a, b, c))
+
+  
