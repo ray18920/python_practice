@@ -1,0 +1,13 @@
+age = 20 #전역 변수 초기화
+
+def get_older(years):
+  global age #age가 정의된 전역 변수임을 선언
+
+  age = age + years #전역 변수 age 를 years 만큼 증가
+
+#메인코드
+print("현재 나이 : ", age)
+get_older(3)
+print('3년 후:', age)
+get_older(7)
+print('7년 후:', age)
