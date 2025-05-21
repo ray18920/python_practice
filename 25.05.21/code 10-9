@@ -1,0 +1,24 @@
+#전역 변수 정의
+global_a = 5
+
+#함수 정의
+def func2(f2_p):
+  f2_a = f2_p * 10  #func2 함수의 지역 변수 정의
+  print('In func2:', global_a, f2_p, f2_a)
+
+def func1():
+  f1_a = global_a * 10 #func1 함수의 지역 변수 정의5
+
+#함수 정의
+def func2(f2_p):
+  f2_a = f2_p * 10  #func2 함수의 지역 변수 정의
+  print('In func2:', global_a, f2_p, f2_a)
+
+def func1():
+  f1_a = global_a * 10  #func1 함수의 지역 변수 정의
+  print('In func1:', global_a, f1_a)
+  func2(f1_a)    #지역 변수를 다른 함수에 전달
+
+#메인코드
+print('In math :', global_a)
+func1()
