@@ -1,0 +1,13 @@
+def get_grade(score):
+""" score가 90점대이면 'A', 80점대이면 'B', 나머지면 'C' 로 등급 구하기 """
+  if score >= 90:
+    grade = 'A'
+  elif score >= 80:
+    grade = 'B'
+  else:
+    grade = 'C'
+  return grade #grade를 반환하며 함수 종료
+
+#main code
+print(95, ':', get_grade(95))
+print(75, ':', get_grade(75))
