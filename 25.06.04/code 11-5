@@ -1,0 +1,14 @@
+class Person:
+    count = 0  # 클래스 변수
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Person.count += 1  # 객체가 생성될 때마다 클래스 변수 증가
+
+p1 = Person('Hong', 20)
+p2 = Person('Lee', 19)
+p3 = Person('Kang', 21)
+p4 = Person('Jung', 22)
+
+print('학생의 객체수: %d' % Person.count)  # 클래스 변수 접근
