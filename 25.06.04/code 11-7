@@ -1,0 +1,20 @@
+class Person:
+    def __init__(self, name = '', age = 0):
+        self.name = name
+        self.age = age
+
+    def say_hello(self):
+        print('반가워요 {}, 나이는 {}세이군요^^'.format(self.name, self.age))
+
+class Student(Person):
+    def __init__(self, name, age, school):
+        super().__init__(name, age)  # 부모의 생성자를 호출해 name과 age를 초기화
+        self.school = school
+
+    def study(self):
+        print(f'{self.school}에서 열공 중...')
+
+me = Student('나경대', 20, 'KNU')
+
+me.say_hello()
+me.study()
