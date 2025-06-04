@@ -1,0 +1,20 @@
+class Person:
+
+    def __init__(self, val_name, val_age):
+        self.__name = val_name     # 변수 앞에 __를 붙여서 속성 보호
+        self.__age = val_age
+
+    def get_name(self):           # 접근자(getter)
+        return self.__name
+
+    def get_age(self):            # 접근자(getter)
+        return self.__age
+
+    def say_hello(self):
+        print('반가워요 {}'.format(self.__name))
+
+p1 = Person('Kim', 20)
+
+p1.say_hello()
+print('이름은 {}, 나이는 {}'.format(p1.get_name(), p1.get_age()))  # 메서드로 참조
+print(p1.__name) #오류가 남
