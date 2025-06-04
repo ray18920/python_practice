@@ -1,0 +1,18 @@
+class Person: #클래스 이름 다음의 ()는 생략 가능
+  name = 'Kim'
+  age = 20
+
+  def say_hello(self):
+    print("반가워요 : ", self.name)
+
+p1 = Person() #person형 객체를 생성하여 p1에 할당
+p2 = Person() #person형 객체를 생성하여 p2에 할당
+
+print(p1)
+print(p2)
+
+p1.name = 'Lee'
+p2.name = 'Jung'
+
+p1.say_hello()
+p2.say_hello()
