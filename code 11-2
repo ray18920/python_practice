@@ -1,0 +1,19 @@
+#클래스 정의
+class person:
+  #클래스 속성
+  name = ' '
+  age = 0
+
+#생성자
+def __init__(self, val_name, val_age):
+  self.name = val_name
+  self.age = val_age
+
+def say_hello(self):
+  print('반가워요 {}, 나이는 {}세이군요^^' .format(self.name, self.age))
+
+p1 = Person('Kim', 20)
+p2 = Person('Lee', 21)
+
+p1.say_hello()
+p2.say_hello()
