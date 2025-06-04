@@ -1,0 +1,20 @@
+class Person:  # Person 클래스 정의
+    def __init__(self, name = '', age = 0):
+        self.name = name
+        self.age = age
+
+    def say_hello(self):
+        print('반가워요 {}, 나이는 {}세이군요^^'.format(self.name, self.age))
+
+class Student(Person):  # Student 자식 클래스
+    def __init__(self, name, age, school):
+        super().__init__(name, age)  # 부모의 생성자를 호출해 name과 age 초기화
+        self.school = school
+
+    def say_hello(self):  # say_hello() 오버라이딩
+        super().say_hello()  # 부모의 say_hello() 호출
+        print(f'{self.school}에 다녀요...')
+
+me = Student('나경대', 20, 'KNU')
+
+me.say_hello()
