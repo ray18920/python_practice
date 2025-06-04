@@ -1,0 +1,19 @@
+class Person:  # 부모 클래스
+    def __init__(self, name = '', age = 0):
+        self.name = name
+        self.age = age
+
+    def say_hello(self):
+        print('반가워요 {}, 나이는 {}세이군요^^'.format(self.name, self.age))
+
+class Adult(Person):  # 자식 클래스
+    pass
+
+class Student(Person):  # 자식 클래스
+    pass
+
+me = Student('나경대', 20)
+father = Adult('나부친', 50)
+
+me.say_hello()       # Person의 메서드 호출 가능
+father.say_hello()
