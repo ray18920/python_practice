@@ -1,0 +1,26 @@
+class Person:
+
+    def __init__(self, name = '', age = 0):
+        self.__name = name
+        self.__age = age
+
+    def get_name(self):
+        return self.__name
+
+    def get_age(self):
+        return self.__age
+
+    def set_name(self, name):      # 설정자(setter)
+        self.__name = name
+
+    def set_age(self, age):        # 설정자(setter)
+        self.__age = age
+
+    def say_hello(self):
+        print('반가워요 {}, 나이는 {}세이군요^^'.format(self.__name, self.__age))
+
+p1 = Person()
+
+p1.set_name('Do')
+p1.set_age(25)
+p1.say_hello()
